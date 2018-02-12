@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3WA Restaurant</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/3wa-resto.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Short+Stack" rel="stylesheet">
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+<body>
+
+<!-- En-tête commune -->
+<div class="entete"></div>
+<header>
+    <h1>
+        <a href="<?= $requestUrl ?>">
+            <p>Ōishi</p><img src="<?= $wwwUrl ?>/images/logo.png" alt="3WA Restaurant"><p>Cuisine Alternative</p>
+        </a>
+    </h1>
+</header>
+
+<!-- Interface utilisateur -->
+<nav class="user-interface">
+    <?php if (isset($_SESSION["connected"])) : ?>
+        <div class="button">
+        <a href="<?= $requestUrl?>/reservation">Réserver</a>
+        <a href="<?= $requestUrl?>/commande">Commander</a>
+        </div>
+        <div class="hello">
+            <span>Bonjour, <strong><?= $_SESSION["prenom"];?></strong> !</span>
+        <a href="<?= $requestUrl?>/deconnexion">Déconnexion</a>
+        </div>
+    <?php else : ?>
+        <a href="<?= $requestUrl?>/creation">Créer un compte</a>
+        <a href="<?= $requestUrl?>/connexion">Se connecter</a>
+    <?php endif; ?>
+</nav>
+
+<main>
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template'] ?>
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <ul class="link-list">
+        <li>Mode de paiement : </li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/visa.png" alt="Visa"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/mastercard.png" alt="MasterCard"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/paypal.png" alt="PayPal"></li>
+    </ul>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>

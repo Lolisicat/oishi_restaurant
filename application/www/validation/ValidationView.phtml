@@ -1,0 +1,37 @@
+
+
+<article id="validation">
+    <h2>Valider votre commande</h2>
+    <form method="POST" action="<?= $requestUrl?>/success">
+            <table>
+                <tr>
+                    <th>Quantité</th>
+                    <th> </th>
+                    <th>Nom du produit</th>
+                    <th>Prix Unitaire</th>
+                    <th>Prix Total</th>
+                </tr>
+                <?php $total = 0 ?>
+            <?php foreach($valid as $ok): ?>
+
+                <tr>
+                    <td class="quantité"><?= $ok['quantity'] ;?></td>
+                    <td class="img"><img src="<?= $wwwUrl?>/<?= $ok['photos'] ?>"/></td>
+                    <td class="nom"><strong><?= $ok["name"]."</strong>";?></td>
+                    <td class="prix"><strong><?= $ok["sell_price"];?>€</strong></td>
+                    <td class="prixtot"><strong><?= $ok["sell_price"]*$ok["quantity"];?>€</strong></td>
+                </tr>
+                     <?php $total += $ok["sell_price"]*$ok["quantity"];?>
+            <?php endforeach;?>
+            </table>
+            <table>
+                <tr>
+                    <td>Prix Total TTC : </td>
+                    <td><?= $total ;?> €</td>
+                </tr>
+            </table>
+            <input type="submit" name="submit" id="run">
+    </form>
+
+</article>
+

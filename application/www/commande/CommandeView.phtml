@@ -1,0 +1,27 @@
+
+
+    <article id="commande">
+        <h2>Passer une commande</h2>
+        <form method="POST" action="<?= $requestUrl?>/basket">
+        <fieldset id="ok">
+            <legend>Ajouter un article</legend>
+            <label for="produits"> Nom du produit : </label><select name="produits" id="meal">
+                <?php foreach($meals as $meal): ?>
+                <option value="<?= $meal["id"];?>"><?= $meal["name"];?></option>
+                <?php endforeach;?>
+            </select><br>
+            <div id="ajax"></div>
+            <label for="quantity"> Quantité : </label>
+            <input type="number" name="quantity" min="1" max="10"><br>
+            <button type="button" id="envoyer">Envoyer</button>
+        </fieldset>
+        <fieldset id="ok">
+        <legend>Votre panier</legend>
+            <div id="titre"><div class="1"><span>Quantité</span><span>Produit</span></div><div class="2"><span>Prix Unitaire</span><span>Prix Total</span></div></div>
+        <div class="basket"></div>
+            <button type="button" name="submit" id="run">Envoyer</button>
+        </fieldset>
+        </form>
+
+    </article>
+

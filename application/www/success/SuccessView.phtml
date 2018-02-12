@@ -1,0 +1,10 @@
+<article id="success">
+
+    <h2>Merci pour votre commande et à très bientôt !</h2>
+
+    <div class="coordo">
+        <h3>Vos coordonnées de commande : </h3>
+        <?= "M/Mme. ".$_SESSION["nom"]." ".$_SESSION["prenom"]."<br/> Au ".$_SESSION["adress"]."<br/> Votre téléphone : ".$_SESSION["phone"]."<br/> Votre email : ". $_SESSION["email"];?>
+    </div>
+    <img src="<?= $wwwUrl ?>/images/yatta.png"/>
+</article>

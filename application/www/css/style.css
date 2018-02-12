@@ -1,0 +1,325 @@
+/*GLOBAL*/
+
+
+body {
+    background: #fff6e4 url("../images/bg.png");
+    font-family: 'Calligraffitti', cursive;
+}
+h1 a {
+    color: tomato;
+    text-decoration: none;
+}
+h1 img {
+    width: 5%;
+    height: 130px;
+}
+h1 p {
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.3rem;
+}
+
+/*HEADER*/
+
+.entete {
+    width: 100%;
+    height: 20px;
+    background-color: tomato;
+}
+h2, h1 {
+    text-align: center;
+    color: mediumaquamarine;
+}
+h2 {
+    font-size: 2rem;
+}
+
+nav {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: mediumaquamarine;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/*HOME*/
+
+table {
+    border-collapse: collapse;
+    margin: 30px;
+    font-style: italic;
+}
+
+td img {
+    width: 30%;
+    height: 200px;
+    border-radius: 5px;
+}
+td {
+    text-align: left;
+    padding: 10px;
+    border-none;
+    border-bottom: 30px solid  #fff6e4;
+    font-family: 'Short Stack', cursive;
+
+}
+
+td.img {
+    width: 50%;
+}
+td.nom {
+    width: 25%;
+    font-size: 1.3rem;
+
+}
+td.prix {
+    width: 15%;
+    text-align: center;
+}
+tr:hover {
+    background-color: mediumaquamarine;
+}
+
+span {
+    margin-right: 10px;
+    font-family: 'Short Stack', cursive;
+}
+
+
+/*CONNEXION*/
+
+.connexion, .creation {
+    text-align: center;
+    margin: auto;
+    width: 40%;
+}
+
+fieldset {
+    padding: 40px 20px;
+    margin: 10px auto;
+    width: 100%;
+    background-color: #fff6e4;
+    color: tomato;
+    font-size: 1.5rem;
+}
+input {
+    margin : 10px;
+}
+
+
+
+
+/*RESERVATION*/
+
+.reservation fieldset {
+    text-align: left;
+    width: 90%;
+    margin: auto;
+}
+
+label {
+    font-size: 1rem;
+    color: black;
+}
+
+#ok {
+    text-align: center;
+    margin: 20px auto;
+    width: 50%;
+    color: black;
+}
+
+
+/*COMMANDER*/
+
+#ajax {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    background-color: mediumaquamarine;
+    border-radius: 5px;
+    border: 1px solid lightseagreen;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: 'Short Stack', cursive;
+}
+
+#commande fieldset {
+    text-align: left;
+}
+
+#ajax img {
+    float: left;
+    width: 25%;
+    margin: 10px;
+    height: 150px;
+}
+
+p#text {
+    font-size: 1rem;
+    display: inline-block;
+    width: 50%;
+}
+
+p#prix {
+    display: block;
+    width: 80%;
+    margin: 0 0 0 10px;
+}
+
+
+
+/*PANIER*/
+
+.basket {
+    font-size: 1rem;
+}
+
+.basket p{
+    display: inline-block;
+}
+
+.basket p.qte{
+    width: 9%;
+    text-align: center;
+}
+
+.basket p.nom{
+    width: 25%;
+}
+
+.basket p.prix {
+    width: 19%;
+    text-align: center;
+}
+
+.basket p.total {
+    width: 5%;
+}
+
+.basket p.vide {
+    width: 40%;
+}
+
+div#titre {
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+div#titre .1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+div#titre .2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+/*RECAP COMMANDE*/
+
+#validation {
+    text-align: center;
+}
+
+#validation table {
+    width: 95%;
+    background-color: #fff6e4;
+}
+#validation img {
+    height: 80px;
+    width: 80px;
+    text-align: left;
+}
+#validation table:nth-child(2) {
+    width: 20%;
+    margin: auto auto auto 65%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#validation th {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#validation td {
+    text-align: center;
+    font-size: 1rem;
+}
+#validation td.img{
+    width: 80px;
+}
+
+#validation button {
+    margin: auto;
+}
+
+
+/*SUCCESS*/
+
+#success {
+    text-align: center;
+}
+
+#success h3 {
+    text-align: center;
+    color: tomato;
+    font-size: 1.5rem;
+}
+
+.coordo {
+    font-family: 'Short Stack', cursive;
+    width: 30%;
+    margin: auto;
+    border: 1px solid tomato;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #fff6e4;
+    padding: 40px;
+}
+
+/*FOOTER*/
+
+footer {
+    text-align: center;
+    margin-top: 10%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer li:first-child {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+footer img {
+    width: 50px;
+}

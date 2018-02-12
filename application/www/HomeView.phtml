@@ -1,0 +1,16 @@
+ <h2><em>Carte du restaurant</em></h2>
+            <article>
+                    <table>
+                        <?php
+                        foreach($meals as $meal): ?>
+                        <tr>
+                            <td class="img"><img src="<?php echo $wwwUrl?>/<?php echo $meal['photos'] ?>"/></td>
+                            <td class="nom"><strong><?= $meal["name"]."</strong><br>".
+                                    $meal["description"];?></td>
+
+                            <td class="prix"><strong><?= $meal["sell_price"];?>€</strong></td>
+                        </tr>
+                        <?php endforeach;?>
+                    </table>
+
+            </article>

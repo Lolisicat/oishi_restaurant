@@ -1,0 +1,31 @@
+
+    <article class="reservation">
+        <?php if ($_SESSION["ty"]) : ?>
+            <?php $_SESSION["ty"] = false; ?>
+            <fieldset id="ok">
+            <p>Merci d'avoir réservé !</p>
+            <p>Vous recevrez notre confirmation très rapidement =)</p>
+                <img src="<?= $wwwUrl ?>/images/onigiri.png"/>
+            </fieldset>
+        <?php else : ?>
+            <h2><i class="fa fa-cutlery" aria-hidden="true"></i> Réservation d'une table</h2>
+            <form method="POST" action="<?= $requestUrl?>/reservation">
+                <fieldset>
+                    <legend><i class="fa fa-circle-o" aria-hidden="true"></i>Informations</legend>
+                    <label for="date"> Date de réservation : </label><input type="date" id="date" name="date">
+                    <label for="heure"> Heure de réservation : </label><input type="time" name="heure"><br>
+                    <label for="couverts"> Nombre de couverts : </label><select name="couverts">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select><br>
+                    <input type="submit" name="submit" id="run">
+                </fieldset>
+            </form>
+        <?php endif ;?>
+    </article>

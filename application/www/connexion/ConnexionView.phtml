@@ -1,0 +1,18 @@
+
+    <article class="connexion">
+        <h2><i class="fa fa-lock" aria-hidden="true"></i> Se connecter avec un compte utilisateur</h2>
+        <form method="POST" action="<?= $requestUrl?>/connexion">
+            <p id='message'>
+                <?php if (isset($message)){
+                    echo $message;
+                };
+                ?>
+            </p>
+            <fieldset>
+                <legend>Authentification</legend>
+            <input type="email" id="login" name="login" placeholder="Votre adresse e-mail"><br>
+            <input type="password" name="password" placeholder="Votre mot de passe"><br>
+            <input type="submit" name="submit" id="run">
+            </fieldset>
+        </form>
+    </article>
